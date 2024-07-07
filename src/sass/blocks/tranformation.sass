@@ -1,0 +1,58 @@
+.transformation
+  margin-bottom: 145px
+  &__title-container
+    max-width: 806px
+    margin-bottom: 54px
+  &__title
+    display: inline
+  &__link
+    display: inline-block
+    width: 280px
+    margin-left: 15px
+  &__steps-container
+    position: relative
+    &::after
+      content: ""
+      width: 378px
+      height: 141px
+      background: url("./images/airplane.png") no-repeat
+      position: absolute
+      bottom: 45px
+      right: -50px
+      transform: rotate(345deg)
+  &__slider-controls
+    display: none
+
+  
+@media screen and (max-width: 1360px) 
+  .transformation__steps-container
+    &::after
+      bottom: 0px
+@media screen and (max-width: 1050px) 
+    .transformation__steps-container
+      &::after
+        right: -40px
+@media screen and (max-width: 800px) 
+    .transformation__steps-container
+      &::after
+        right: -35px
+@media screen and (max-width: 680px) 
+  .transformation
+    margin-bottom: 120px
+    &__link
+      margin-top: 12px
+      width: 100%
+      margin-left: 0
+    &__title-container 
+      margin-bottom: 150px
+    &__slider-controls
+      display: flex
+      justify-content: center
+      margin-top: 28px
+    &__steps-container::after 
+      width: 315px
+      height: 120px
+      background-size: contain
+      top: -95px
+      left: 50%
+      transform: translateX(-50%) rotate(344deg)

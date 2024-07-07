@@ -1,0 +1,75 @@
+.slider-controls
+  display: flex
+  align-items: center
+  justify-content: center
+  column-gap: 14px
+  &__button
+    position: relative
+    cursor: pointer
+    background-color: #313131
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    transition: 0.3s
+    &:hover
+      background-color: #fbce51
+    &::after
+      content: ""
+      position: absolute
+      top: 12px
+      left: 14px
+      width: 12px
+      height: 20px
+      background: url("./images/arrow.svg") no-repeat
+    &:disabled
+      opacity: 0.2
+      &:hover
+        background-color:#313131
+  &__button_type_next
+    &::after
+      top: 12px
+      left: 19px
+      transform: rotate(180deg)
+  &__buttons-container 
+    display: flex
+    gap: 6px
+  &__circle-button
+    width: 10px
+    height: 10px
+    background:#d9d9d9
+    border-radius: 50%
+    cursor: pointer
+    transition: .3s 
+    padding: 0
+    &:hover
+      opacity: 0.7
+    &_active
+      background: #313131
+      &:hover
+        opacity: 1
+  &__status
+    font-size: 16px
+    font-weight: 400
+    line-height: 19.2px
+    display: flex
+    column-gap:2px
+  &__delimiter
+    opacity: 0.6
+  &__total-items
+    opacity: 0.6
+
+
+@media screen and (max-width: 600px) 
+  .slider-controls__button 
+    width: 36px
+    height: 36px
+    &::after 
+      content: ""
+      width: 10px
+      height: 18px
+      background-size: contain
+      top: 10px
+      left: 11px
+    &_type_next::after 
+      top: 9px
+      left: 14px

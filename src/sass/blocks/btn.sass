@@ -1,0 +1,58 @@
+.btn
+  text-align: center
+  border-radius: 40px
+  line-height: 1.3
+  font-weight: 500
+  text-decoration: none
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 14px 20px
+  transition: .3s
+  width: 263px
+  &_animated
+    animation: BtnToUp .5s ease-out .7s
+    animation-fill-mode: backwards
+  &__label
+    font-size: 16px
+    font-weight: 500
+    line-height: 20.8px
+    width: 165px
+    display: inline-block
+  &_color_black
+    background: #1F1F1F
+    color: #fff
+    &:hover
+      color: #1f1f1f
+      background: #FBCE51
+  &_style_stroke
+    outline: 2px solid black
+    &:hover
+      outline: none
+      background: #1f1f1f
+      color: white
+
+
+@media screen and (max-width: 1100px) 
+  .btn_style_stroke 
+    background-color: rgba(255, 255, 255, 0.9)
+    color: #1f1f1f
+    outline: none
+
+@media screen and (max-width: 600px) 
+  .btn
+    width: 100%
+  .btn__label 
+    width: 100%
+
+
+@keyframes BtnToUp
+  0% 
+      opacity: 0
+      transform: translateY(50px)
+  
+
+  100% 
+      opacity: 1
+      transform: translateY(0)
+  

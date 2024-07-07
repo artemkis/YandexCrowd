@@ -1,0 +1,100 @@
+.notice
+  margin-bottom: 188px
+  &__content
+    font-family: 'Merriweather','Times New Roman', serif
+    font-size: 36px
+    font-weight: 400
+    line-height: 48.6px
+    text-transform: uppercase
+    font-variant-numeric: lining-nums proportional-nums
+    &_position_right
+      margin: 28px 0 60px 0px
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    column-gap: 64px
+    &:not(:last-child)
+      margin-bottom: 37px
+    &_style_collage
+       align-items: flex-start
+       column-gap: 18px
+  &__img_style_ellipse
+    border-radius: 50% 50%
+  &__img_style_collage
+    margin-left: -30px
+  &__table
+    margin-bottom: 48px
+  &__box
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        left: -14px
+        width: 528px
+        height: 609px
+        mix-blend-mode: color-burn
+        background: url("./images/overlay2.png")
+
+
+@media screen and (max-width: 1250px) 
+  .notice__img_style_collage 
+    width: 430px
+  .notice__box::before
+    left:-17px
+    width: 429px
+    height: 462px
+  .notice__img_style_collage
+    margin-left: -15px
+
+@media screen and (max-width: 1050px) 
+  .notice__container 
+    flex-wrap: wrap
+    gap: 44px
+  .notice__table 
+    margin: 44px 0 40px 0
+  .notice__content 
+    display: contents
+  .notice__text:last-child 
+    order: 1
+  .notice__container_style_collage
+    position: relative
+  .notice__img_style_collage
+    margin-left: -15px
+  
+
+
+@media screen and (max-width: 600px) 
+  .notice
+    margin-bottom: 122px
+  .notice__container 
+    gap: 24px
+    width: 100%
+  .notice__content 
+    font-size: 28px
+    line-height: 38.2px
+  .notice__img
+    width: 100%
+  .notice__box::before
+    content: ""
+    position: absolute
+    left: -13px
+    width: 100%
+    height: 100%
+    mix-blend-mode: color-burn
+    background: url("./images/overlay2.png")
+  .notice__img_style_collage
+    margin-left: -15px
+  
+@media screen and (max-width: 450px) 
+  .notice__img_style_collage 
+    width: 335px
+    margin-left: -7px
+  .notice__table 
+    margin: 28px 0 25px 0
+  .notice__box::before
+    left: -1px
+  
+@media screen and (max-width: 375px) 
+  .notice__img_style_collage 
+    width: 100%

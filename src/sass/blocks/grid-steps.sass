@@ -1,0 +1,80 @@
+.grid-steps
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 20px
+  grid-template-areas: "step1 step2 step3" "step4 step5 step3" "step6 step7 step7"
+  &__step
+    background: url("./images/steps_bg.jpg")
+    padding: 20px 21px 20px 72px
+    counter-increment: custom-counter
+    position: relative
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.2
+    &:nth-child(1)
+      grid-area: step1
+    &:nth-child(2)
+      grid-area: step2
+    &:nth-child(3)
+      grid-area: step3
+    &:nth-child(4)
+      grid-area: step4
+    &:nth-child(5)
+      grid-area: step5
+    &:nth-child(6)
+      grid-area: step6
+    &:nth-child(7)
+      grid-area: step7
+      padding-right: 285px
+    &::before
+      content: counter(custom-counter)
+      position: absolute
+      top: 20px
+      left: 20px
+      width: 36px
+      height: 36px
+      background: #ffffff
+      border-radius: 50%
+      font-size: 20px
+      font-weight: 600
+      line-height: 24px
+      display: flex
+      justify-content: center
+      align-items: center
+
+@media screen and (max-width: 1360px) 
+  .grid-steps__step:nth-child(7) 
+    padding-right: 315px
+  .grid-steps 
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: "step1 step2" "step3 step4" "step5 step6" "step7 step7"
+
+@media screen and (max-width: 960px) 
+  .grid-steps 
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: "step1 step2" "step3 step4" "step3 step5" "step6 step6" "step7 step7"
+
+@media screen and (max-width: 800px) 
+  .grid-steps 
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: "step1 step2" "step3 step3" "step4 step5" "step6 step6" "step7 step7"
+  
+@media screen and (max-width: 680px) 
+  .grid-steps 
+    display: flex
+    flex-direction: column
+    gap: 0
+    height: 300px
+    padding: 48px 0 14px 0
+    background: url("./images/steps_bg.jpg")
+    &__step:nth-child(7)
+      padding-right: 21px
+    &__step 
+      padding-top: 14px
+      padding-bottom: 14px
+      font-size: 18px
+      line-height: 21.8px
+      background: none
+      &::before
+        top: 12px
+  

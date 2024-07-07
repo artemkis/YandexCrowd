@@ -1,0 +1,40 @@
+.participants
+  margin-bottom: 140px
+  &__list
+    display: flex
+    column-gap: 20px
+    position: relative
+    left: 0px
+    transition: transform 0.5s 
+  &__title
+    margin-bottom: 59px
+  &__container
+    overflow: hidden
+  &__slider-controls 
+    position: absolute
+    right: 0
+    top: -114px
+    width: 152px
+
+
+
+@media screen and (max-width: 1350px) 
+  .participants__list 
+    gap: 0
+  
+@media screen and (max-width: 1100px) 
+  .participants__slider-controls 
+    left: 50%
+    transform: translateX(-50%)
+    top: auto
+    bottom: -80px
+  
+@media screen and (max-width: 800px) 
+  .participants
+    margin-bottom: 178px
+  .participants__title 
+    margin: 0 0 40px 0
+  
+@media screen and (max-width: 600px) 
+  .participants__slider-controls 
+    width: 134px
